@@ -1,0 +1,60 @@
+﻿<Window x:Class="foogle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:local="clr-namespace:foogle"
+        mc:Ignorable="d"
+        Title="Foogle" Height="450" Width="800">
+    <Grid Background="#FFE6E6E6" Margin="-2,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="240*"/>
+            <ColumnDefinition Width="310*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="170*"/>
+        </Grid.RowDefinitions>
+
+        <Ellipse Margin="10,90,157,15" Fill="#FFCBEAC8" Grid.RowSpan="6" Grid.ColumnSpan="3" Grid.Row="1"/>
+
+        <Button x:Name="Search" Content="Search" RenderTransformOrigin="0.175,0.709" Background="#FFF2DBD2" Click="GoButton_Click" Grid.Column="4" Grid.ColumnSpan="3" FontFamily="Tahoma" BorderBrush="#FFF2DBD2" Margin="27,0,0,31" />
+
+        <Button x:Name="Refresh" Content="Refresh" Margin="1,0,58,31" RenderTransformOrigin="1.5,2.175" Background="#FFCBEAC8" Click="RefreshButton_Click" FontFamily="Tahoma" BorderBrush="#FFCBEAC8"/>
+        <Button x:Name="Home" Content="Home" Background="#FFCBEAC8" Click="HomeButton_Click" Margin="72,0,17,31" FontFamily="Tahoma" BorderBrush="#FFCBEAC8"/>
+        <Ellipse Margin="229,59,10,0" Fill="#FFF2DBD2" Grid.RowSpan="6" Grid.ColumnSpan="4" Grid.Column="1"/>
+        <TextBox x:Name="AddressBar" Margin="113,0,41,31" TextWrapping="Wrap" Text="Enter URL" FontSize="17" TextAlignment="Center" RenderTransformOrigin="0.058,0.427" Grid.ColumnSpan="5" FontFamily="Tahoma">
+            <TextBox.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF778385" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" Height="0" Margin="87,90,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="5" Grid.Row="1" Grid.Column="2"/>
+        <Label Content="F O O G L E" Margin="81,61,29,112" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="6" FontSize="120" FontFamily="Tahoma">
+            <Label.Foreground>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF566B6E" Offset="0.938"/>
+                    <GradientStop Color="White" Offset="0.033"/>
+                </RadialGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.ColumnSpan="7" Grid.RowSpan="7" Height="382" VerticalAlignment="Bottom"  />
+        <Label
+
+    Opacity="0.8" Margin="1,-26,0,270" AutomationProperties.IsColumnHeader="True" FontFamily="Tahoma" FontSize="150" Content="F O O G L E"/>
+
+    </Grid>
+</Window>
