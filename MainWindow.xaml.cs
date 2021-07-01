@@ -38,5 +38,13 @@ namespace foogle
             Browser.Load("https://duckduckgo.com/%22");
             AddressBar.Text = "Enter URL";
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Browser.WebBrowser.CanGoBack)
+            {
+                Browser.WebBrowser.Back();
+            }
+        }
     }
 }

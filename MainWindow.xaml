@@ -31,10 +31,10 @@
 
         <Button x:Name="Search" Content="Search" RenderTransformOrigin="0.175,0.709" Background="#FFF2DBD2" Click="GoButton_Click" Grid.Column="4" Grid.ColumnSpan="3" FontFamily="Tahoma" BorderBrush="#FFF2DBD2" Margin="27,0,0,31" />
 
-        <Button x:Name="Refresh" Content="Refresh" Margin="1,0,58,31" RenderTransformOrigin="1.5,2.175" Background="#FFCBEAC8" Click="RefreshButton_Click" FontFamily="Tahoma" BorderBrush="#FFCBEAC8"/>
-        <Button x:Name="Home" Content="Home" Background="#FFCBEAC8" Click="HomeButton_Click" Margin="72,0,17,31" FontFamily="Tahoma" BorderBrush="#FFCBEAC8"/>
+        <Button x:Name="Refresh" Content="Refresh" Margin="1,0,77,31" RenderTransformOrigin="1.5,2.175" Background="#FFCBEAC8" Click="RefreshButton_Click" FontFamily="Tahoma" BorderBrush="#FFCBEAC8"/>
+        <Button x:Name="Home" Content="Home" Background="#FFCBEAC8" Click="HomeButton_Click" Margin="94,0,235,31" FontFamily="Tahoma" BorderBrush="#FFCBEAC8" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2"/>
         <Ellipse Margin="229,59,10,0" Fill="#FFF2DBD2" Grid.RowSpan="6" Grid.ColumnSpan="4" Grid.Column="1"/>
-        <TextBox x:Name="AddressBar" Margin="113,0,41,31" TextWrapping="Wrap" Text="Enter URL" FontSize="17" TextAlignment="Center" RenderTransformOrigin="0.058,0.427" Grid.ColumnSpan="5" FontFamily="Tahoma">
+        <TextBox x:Name="AddressBar" Margin="10,0,41,31" TextWrapping="Wrap" Text="Enter URL" FontSize="17" TextAlignment="Center" RenderTransformOrigin="0.058,0.427" Grid.ColumnSpan="4" FontFamily="Tahoma" Grid.Column="1">
             <TextBox.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FF778385" Offset="1"/>
@@ -55,6 +55,7 @@
         <Label
 
     Opacity="0.8" Margin="1,-26,0,270" AutomationProperties.IsColumnHeader="True" FontFamily="Tahoma" FontSize="150" Content="F O O G L E"/>
+        <Button x:Name="Back" Content="Back" Background="#FFCBEAC8" Click="BackButton_Click" Margin="53,0,36,31" FontFamily="Tahoma" BorderBrush="#FFCBEAC8" RenderTransformOrigin="0.5,0.5"/>
 
     </Grid>
 </Window>
